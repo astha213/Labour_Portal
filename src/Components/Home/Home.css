@@ -1,0 +1,191 @@
+/* General Styling for the Home Component */
+.home {
+    font-family: Arial, sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #13231b; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+}
+
+/* Navbar title */
+.navbar h1 {
+    margin: 0;
+    color: #fff; 
+    font-weight: bold;
+}
+
+/* Navbar links */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; 
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #dee0ee; 
+}
+
+/* Adjust content padding to avoid overlap with the fixed navbar */
+.home > section {
+    padding-top: 80px;
+}
+
+.welcome-container {
+    opacity: 0.9; 
+    transition: opacity 0.3s ease;
+  }
+  
+  .welcome-container:hover {
+    opacity: 1; 
+  }
+
+/* Section Styling */
+.welcome, .job-listings, .testimonials, .contact, .forget {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.welcome, .job-listings, .testimonials {
+    background-color: #f8f9fa; 
+}
+
+.contact, .forget {
+    background-color: #ecf6f1; 
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid #614f4f; 
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: black; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    max-width: 800px;
+    background: #fff;
+    padding: 10px;
+    margin-top: 120px; 
+    border-radius: 10px;
+    box-shadow: 4px 8px 6px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.15);
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+       z-index: 100; 
+}
+
+
+.welcome {
+    text-align: center;
+    background: #fff
+}
+
+.welcome h2 {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.welcome p {
+    color: #333;
+    font-size: 18px;
+    margin: 20px 0;
+    margin-bottom: 0px;
+}
+
+.welcome-image {
+    max-width: 100%; 
+    height: auto;
+    margin-top: 0px; 
+}
+
+.user-menu {
+    position: relative;
+}
+
+/* Ensure the dropdown is positioned correctly */
+.dropdown-menu {
+  display: flex; 
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  right: 0;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 10px;
+  width: auto;
+}
+
+.dropdown-menu a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.user-menu:hover .dropdown-menu {
+  display: flex;
+}
+
+/* When dropdownOpen is true */
+.dropdown-menu.open {
+  display: flex; 
+}
